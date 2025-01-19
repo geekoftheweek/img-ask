@@ -12,7 +12,7 @@ from ollama import ChatResponse
 
 def get_parser():
     parser = argparse.ArgumentParser(
-        prog="main.py",
+        prog="img-ask",
         description="Prompt ollama with a collection of images",
     )
     parser.add_argument(
@@ -51,7 +51,7 @@ def process_images(model, prompt, images):
         yield (result)
 
 
-def main(streaming=False):
+def main_cli(streaming=False):
     parser = get_parser()
     args = parser.parse_args()
     result_stream = process_images(args.model, args.prompt, args.image)
@@ -63,4 +63,4 @@ def main(streaming=False):
 
 
 if __name__ == "__main__":
-    main()
+    main_cli()

@@ -1,7 +1,13 @@
 [project]
-name = "imgquery"
+name = "img-ask"
 version = "0.1.0"
-description = "Add your description here"
+description = "Query ollama about images"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["ollama>=0.4.6"]
+
+[project.scripts]
+img-ask = "main:main_cli"
+
+[tool.uv]
+package = true

@@ -1,5 +1,32 @@
+# img-ask
+
+## Installation
+
+### With uv
+
 ```
-usage: main.py [-h] [-s] [-m MODEL] prompt [image ...]
+uv run img-ask -h
+```
+
+### With pip
+
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install .
+img-ask -h
+```
+
+### Troubleshooting
+
+If you don't end up with a runnable `img-ask` command on your path, first make sure your virtual environment is activated.
+
+If all else fails, you can always `pip install ollama` and then `python main.py -h`.
+
+## Usage
+
+```
+usage: img-ask [-h] [-s] [-m MODEL] prompt [image ...]
 
 Prompt ollama with a collection of images
 
